@@ -16,5 +16,6 @@ Calculer automatiquement les prix et les totaux.
 
 Ce projet est conçu pour améliorer les compétences en manipulation du DOM, en conception d'interfaces responsives et en gestion des données via localStorage.
 
+ https://benrazek-anbar.github.io/CRUD/
 
 ![Screenshot_29-11-2025_18855_](https://github.com/user-attachments/assets/0eec4223-5af1-4147-90dd-fce48e47a753)
