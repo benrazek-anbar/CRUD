@@ -2,6 +2,7 @@
 Une application CRUD responsive développée avec HTML, Tailwind CSS et JavaScript.
 Ce projet permet aux utilisateurs de :
 Créer de nouveaux produits.
+
 Afficher et gérer les données existantes.
 Mettre à jour les informations des produits.
 Supprimer un ou plusieurs éléments.
