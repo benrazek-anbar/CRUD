@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CRUD JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+</html>
+<body class="text-center m-0 p-0 h-[800px] bg-slate-900">
+    <!-- Section pour creer le titre et la discription-->
+    <section class="mt-5 mb-5 ">
+        <h1 class="text-4xl text-blue-700">CRUD</h1>
+        <p class="text-gray-500">A simple CRUD application for adding, displaying, modifying, and deleting data. <br> A project designed to practice information management and manipulation.</p>
+    </section>
+
+    <!-- Section pour creer les inputs -->
+    <section class="text-white ">
+        <input type="text" id="inptitle" placeholder="Title" class="sm:w-[62%] w-[90%] h-[35px] mt-7 pl-3 border-1 border-solid border-gray-300 rounded-[50px] ">
+        <div class="mt-7">
+            <input onkeyup="getTotal()" type="number" id="inprice" placeholder="Price" class="w-[10%] h-[35px] mr-[15px] pl-3 border-1 border-solid border-gray-300 rounded-[50px]">
+            <input onkeyup="getTotal()" type="number" id="inptexte" placeholder="Textes" class="w-[10%]  h-[35px] mr-[15px] pl-3 border-1 border-solid border-gray-300 rounded-[50px]">
+            <input onkeyup="getTotal()" type="number" id="inpads" placeholder="Ads" class="w-[10%]  h-[35px] mr-[15px] border-1 pl-3 border-solid border-gray-300 rounded-[50px]">
+            <input onkeyup="getTotal()" type="number" id="inpdiscount" placeholder="Discount" class="w-[10%]  h-[35px] mr-[15px] border-1 pl-3 border-solid border-gray-300 rounded-[50px]">
+            <small id="btntotal" class=" bg-blue-700 px-[78px] py-[12px] text-white  rounded-[50px]">Total</small>
+        </div>
+        <input type="number" id="inpcount" placeholder="Count" class="sm:w-[62%] w-[90%] h-[35px] mt-7 pl-3 border-1 border-solid border-gray-300 rounded-[50px]"><br>
+        <input type="text" id="inpcategory" placeholder="Category" class="sm:w-[62%] w-[90%] h-[35px] mt-7 pl-3 border-1 border-solid border-gray-300 rounded-[50px]"><br>
+        <button id="btncreate" class="sm:w-[62%] w-[90%] h-[35px] mt-7   bg-blue-700  text-white  rounded-[50PX] cursor-pointer">Create</button><br>
+
+        <!-- Section pour les outputs -->
+        <input type="text" onkeyup="searchData(this.value)" id="inpsearch" placeholder="Search" class="sm:w-[62%] w-[90%] h-[35px] mt-7 pl-3 border-1 border-solid border-gray-300 rounded-[50px]"><br>
+        <div>
+            <button onclick="getSearch(this.id)" id="btnsearchtitle" class="sm:w-[31%] w-[45%] h-[35px] mt-7   bg-blue-700  text-white rounded-[50PX] cursor-pointer">Search By Title</button>
+            <button onclick="getSearch(this.id)" id="btnsearchcategory" class="sm:w-[31%] w-[45%]  h-[35px] mt-7   bg-blue-700 text-white rounded-[50PX] cursor-pointer">Search By Category</button>
+        </div>
+        <button id="btndeleteall" onclick="deleteAll()" class="sm:w-[62%] w-[90%] h-[35px] mt-7  text-white  bg-blue-700 rounded-[50PX] cursor-pointer">Delete All </button>
+        <table class="mx-auto w-[62%] mt-5 border-separate border border-gray-400 ">
+            <tr class="">
+                <th class="border border-gray-300 text-gray-500">ID</th>
+                <th class="border border-gray-300 text-gray-500">Title</th>
+                <th class="border border-gray-300 text-gray-500">Price</th>
+                <th class="border border-gray-300 text-gray-500">Textes</th>
+                <th class="border border-gray-300 text-gray-500">ADS</th>
+                <th class="border border-gray-300 text-gray-500">Discount</th>
+                <th class="border border-gray-300 text-gray-500">Total</th>
+                <th class="border border-gray-300 text-gray-500">Category</th>
+                <th class="border border-gray-300 text-gray-500">Update</th>
+                <th class="border border-gray-300 text-gray-500">Delete</th>                
+            </tr>
+
+            <tbody id="infoTable">
+
+            </tbody>
+            
+        </table>
+    </section>
+
+
+    <!-- Script JS-->
+    <script src="JS/main.js"></script>
+</body>
+</html>
